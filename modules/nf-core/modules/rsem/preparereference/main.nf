@@ -33,7 +33,6 @@ process RSEM_PREPAREREFERENCE {
             --genomeFastaFiles $fasta \\
             --sjdbGTFfile $gtf \\
             --runThreadN $task.cpus \\
-            $memory \\
             $args2
 
         rsem-prepare-reference \\
