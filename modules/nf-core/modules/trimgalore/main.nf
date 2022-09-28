@@ -29,10 +29,7 @@ process TRIMGALORE {
     // See: https://github.com/nf-core/atacseq/pull/65
     def cores = 1
     if (task.cpus) {
-        cores = (task.cpus as int) - 4
-        if (meta.single_end) cores = (task.cpus as int) - 3
-        if (cores < 1) cores = 1
-        if (cores > 4) cores = 4
+        cores = (task.cpus as int)
     }
 
     // Clipping presets have to be evaluated in the context of SE/PE
